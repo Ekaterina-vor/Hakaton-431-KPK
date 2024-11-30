@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг филиалов</title>
+    <link rel="stylesheet" href="rating.css">
+</head>
+<body>
+    <header>
+        <div class="hero-image"></div>
+        <div class="logo">
+            <img src="logo.png" alt="Логотип отдела продаж">
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rating.html" class="active">Рейтинг</a></li>
+                <li><a href="login.html">Личный кабинет</a></li>
+                <li><a href="#">Сделки</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+
+       
+            
+            <div class="rating-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Филиал</th>
+                            <th>Рейтинг</th>
+                            <th>Сумма продаж(руб.)</th>
+                            <th>КПД</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="branch-row" onclick="toggleEmployees('moscow')">
+                            <td>1</td>
+                            <td>Москва</td>
+                            <td>4.8</td>
+                            <td>5,000,000</td>
+                            <td>120%</td>
+                        </tr>
+                        <tr id="moscow-employees" class="employees-list" style="display: none;"></tr>
+                        
+                        <tr class="branch-row" onclick="toggleEmployees('spb')">
+                            <td>2</td>
+                            <td>Санкт-Петербург</td>
+                            <td>4.7</td>
+                            <td>4,800,000</td>
+                            <td>115%</td>
+                        </tr>
+                        <tr id="spb-employees" class="employees-list" style="display: none;"></tr>
+                        
+                        <tr class="branch-row" onclick="toggleEmployees('kazan')">
+                            <td>3</td>
+                            <td>Казань</td>
+                            <td>4.6</td>
+                            <td>4,500,000</td>
+                            <td>110%</td>
+                        </tr>
+                        <tr id="kazan-employees" class="employees-list" style="display: none;"></tr>
+
+                        <tr class="branch-row" onclick="toggleEmployees('novosibirsk')">
+                            <td>4</td>
+                            <td>Новосибирск</td>
+                            <td>4.5</td>
+                            <td>4,200,000</td>
+                            <td>105%</td>
+                        </tr>
+                        <tr id="novosibirsk-employees" class="employees-list" style="display: none;"></tr>
+
+                        <tr class="branch-row" onclick="toggleEmployees('ekb')">
+                            <td>5</td>
+                            <td>Екатеринбург</td>
+                            <td>4.4</td>
+                            <td>4,000,000</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr id="ekb-employees" class="employees-list" style="display: none;"></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <script>
+        const employeesData = {
+    'moscow': [
+        { place: 1, name: 'Иванов И.И.', rating: 4.8, sales: '1,000,000', kpd: '120%' },
+        { place: 2, name: 'Петров П.П.', rating: 4.7, sales: '980,000', kpd: '115%' },
+        { place: 3, name: 'Сидоров С.С.', rating: 4.6, sales: '950,000', kpd: '110%' },
+        { place: 4, name: 'Козлов К.К.', rating: 4.5, sales: '920,000', kpd: '108%' }
+    ],
+    'spb': [
+        { place: 1, name: 'Смирнов С.С.', rating: 4.7, sales: '980,000', kpd: '115%' },
+        { place: 2, name: 'Васильев В.В.', rating: 4.6, sales: '950,000', kpd: '112%' },
+        { place: 3, name: 'Попов П.П.', rating: 4.5, sales: '920,000', kpd: '110%' },
+        { place: 4, name: 'Морозов М.М.', rating: 4.4, sales: '900,000', kpd: '108%' }
+    ],
+    'kazan': [
+        { place: 1, name: 'Хакимов Р.Р.', rating: 4.6, sales: '950,000', kpd: '110%' },
+        { place: 2, name: 'Гафуров А.И.', rating: 4.5, sales: '920,000', kpd: '108%' },
+        { place: 3, name: 'Шарипов Т.М.', rating: 4.4, sales: '900,000', kpd: '105%' },
+        { place: 4, name: 'Валиев И.Р.', rating: 4.3, sales: '880,000', kpd: '103%' }
+    ],
+    'novosibirsk': [
+        { place: 1, name: 'Кузнецов А.А.', rating: 4.5, sales: '920,000', kpd: '105%' },
+        { place: 2, name: 'Соколов Д.В.', rating: 4.4, sales: '900,000', kpd: '104%' },
+        { place: 3, name: 'Лебедев М.С.', rating: 4.3, sales: '880,000', kpd: '103%' },
+        { place: 4, name: 'Новиков П.А.', rating: 4.2, sales: '860,000', kpd: '102%' }
+    ],
+    'ekb': [
+        { place: 1, name: 'Волков С.П.', rating: 4.4, sales: '900,000', kpd: '100%' },
+        { place: 2, name: 'Зайцев Н.В.', rating: 4.3, sales: '880,000', kpd: '98%' },
+        { place: 3, name: 'Павлов Г.С.', rating: 4.2, sales: '860,000', kpd: '97%' },
+        { place: 4, name: 'Семенов Р.А.', rating: 4.1, sales: '840,000', kpd: '95%' }
+    ]
+};
+
+        function toggleEmployees(branchId) {
+            const employeesList = document.getElementById(`${branchId}-employees`);
+            const allEmployeesLists = document.getElementsByClassName('employees-list');
+            
+            for(let list of allEmployeesLists) {
+                if(list.id !== `${branchId}-employees`) {
+                    list.style.display = 'none';
+                }
+            }
+            
+            if (employeesList.style.display === 'none') {
+                employeesList.style.display = 'table-row';
+                loadEmployees(branchId);
+            } else {
+                employeesList.style.display = 'none';
+            }
+        }
+
+        function loadEmployees(branchId) {
+            const employeesList = document.getElementById(`${branchId}-employees`);
+            const employees = employeesData[branchId] || [];
+            
+            let employeesHtml = `
+                <td colspan="5">
+                    <div class="nested-table">
+                        <table>
+                            ${employees.map(emp => `
+                                <tr>
+                                    <td>${emp.place}</td>
+                                    <td>${emp.name}</td>
+                                    <td>${emp.rating}</td>
+                                    <td>${emp.sales}</td>
+                                    <td>${emp.kpd}</td>
+                                </tr>
+                            `).join('')}
+                        </table>
+                    </div>
+                </td>
+            `;
+            
+            employeesList.innerHTML = employeesHtml;
+        }
+
+        function showBranchRating() {
+            const select = document.getElementById('branchSelect');
+            const selectedBranch = select.value;
+            if (selectedBranch) {
+                toggleEmployees(selectedBranch);
+            }
+        }
+    </script>
+</body>
+</html>
