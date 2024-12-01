@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Левая панель -->
+        <div class="profile-sidebar">
+            <div class="field-group">
+                <img src="https://arikool.ee/wp-content/uploads/2021/05/office-worker-speaking-by-phone_236854-3960.jpg" alt="Фото профиля" class="profile-photo">
+                <button class="edit-btn"></button>
+            </div>
+            
+            <div class="field-group">
+                <label>Фамилия</label>
+                <div class="input-with-edit">
+                    <input type="text" value="Петров" >
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Имя</label>
+                <div class="input-with-edit">
+                    <input type="text" value="Петр">
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Отчество</label>
+                <div class="input-with-edit">
+                    <input type="text" placeholder="Введите отчество">
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Контрагент/Должность</label>
+                <div class="input-with-edit">
+                    <input type="text" placeholder="Выберите контрагента">
+                    <button class="edit-btn"></button>
+                </div>
+                <div class="contractors-list">
+                    <div class="contractor-item">
+                        <span>ИП Иванов Иван Иванович</span>
+                        <span class="subtitle">Генеральный директор</span>
+                    </div>
+                    <div class="contractor-item">
+                        <span>ИП Иванов Иван Иванович</span>
+                        <span class="subtitle">Генеральный директор</span>
+                    </div>
+                    <div class="contractor-item">
+                        <span>ИП Иванов Иван Иванович</span>
+                        <span class="subtitle">Генеральный директор</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Email (логин)</label>
+                <div class="input-with-edit">
+                    <input type="email" value="ip.petrov@mail.com">
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Телефон</label>
+                <div class="input-with-edit">
+                    <input type="tel" value="+7953123212">
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Пароль</label>
+                <div class="input-with-edit">
+                    <input type="password" value="••••••••">
+                    <button class="edit-btn"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="profile-content">
+            <h1>Мой профиль</h1>
+            
+            <div class="tabs">
+                <button class="tab active">Мои клиенты</button>
+                <button class="tab">Мои сделки</button>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="header-cell">Контрагент</div>
+                    <div class="header-cell">E-mail</div>
+                    <div class="header-cell">Должность</div>
+                    <div class="header-cell">Тип контрагента</div>
+                    <div class="header-cell actions">
+                        <button class="icon-btn square">
+                            <span class="material-icons">filter_alt</span>
+                        </button>
+                        <button class="icon-btn square">
+                            <span class="material-icons">tune</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">ИП Иванов Иван Иванович</div>
+                    <div class="cell">ip.ivanov@nomail.com</div>
+                    <div class="cell">Гендиректор</div>
+                    <div class="cell">Заказчик</div>
+                    <div class="cell actions">
+                        <button class="action-btn circle">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button class="action-btn circle">
+                            <span class="material-icons">check_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <span>0 — 10 из 1200 записей</span>
+                <div class="pagination-controls">
+                    <span>страница</span>
+                    <button class="page-btn prev green-btn"></button>
+                    <input type="text" value="1">
+                    <button class="page-btn next green-btn"></button>
+                    <span>из 120</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <span>©2020 Company Name</span>
+            <a href="#" class="support">Техподдержка</a>
+        </div>
+    </footer>
+</body>
+</html> 

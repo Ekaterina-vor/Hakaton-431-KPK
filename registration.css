@@ -14,27 +14,10 @@ body {
     flex-direction: column;
 }
 
-.login-container {
+.container {
     width: 100%;
     max-width: 1200px;
     padding: 2rem;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.logo-image {
-    flex: 1;
-    max-width: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin: 10px auto;
-    display: block;
-    margin: 0 auto 2rem auto;
 }
 
 header {
@@ -47,33 +30,41 @@ header h1 {
     color: #466d4f;
 }
 
-.login-form h1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.login-content {
+.registration-section {
     display: flex;
     gap: 0;
 }
 
-.login-image {
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.logo-image {
     flex: 1;
-    max-width: 50%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.login-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 10px auto;
     display: block;
+    margin: 0 auto 2rem auto;
 }
 
-.login-form {
+
+.logo img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     flex: 1;
     background: white;
     padding: 3rem 4rem;
@@ -81,10 +72,10 @@ header h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.login-form h2 {
+.registration-form h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: black;
+    color: #333;
 }
 
 .form-group {
@@ -106,7 +97,38 @@ input:focus {
     border-color: #006400;
 }
 
-.login-btn {
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+    margin: 0px auto;
+}
+
+button:hover {
+    background-color: #005300;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #006400;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.registration-btn {
     width: 100%;
     padding: 12px;
     background-color: #006400;
@@ -121,47 +143,47 @@ input:focus {
     margin: 20px auto;
 }
 
-.login-btn:hover {
+.registration-btn:hover {
     background-color: #005300;
 }
 
-.login-form p {
+.registration-form p {
     text-align: center;
 }
 
-.login-form a {
+.registration-form a {
     color: #006400;
     text-decoration: none;
 }
 
-.login-form a:hover {
+.registration-form a:hover {
     text-decoration: underline;
 }
 
-.login-buttons {
+.registration-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
 
-.login-wrapper {
+.registration-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-right: 140px;
 }
 
-.login-link {
+.registration-link {
     margin: 0;
 }
 
-.login-link a {
+.registration-link a {
     color: #006400;
     text-decoration: none;
 }
 
-.login-link a:hover {
+.registration-link a:hover {
     text-decoration: underline;
 }
 
@@ -187,17 +209,16 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-    .login-content {
+    .registration-section {
         flex-direction: column;
         gap: 20px;
     }
 
-    .login-image,
-    .login-form {
+    .image-container,
+    .registration-form {
         max-width: 100%;
         border-radius: 20px;
     }
-
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -216,3 +237,5 @@ input::placeholder {
     color: #999;
     font-size: 16px;
 }
+
+

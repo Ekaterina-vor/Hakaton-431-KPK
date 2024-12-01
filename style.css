@@ -7,6 +7,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-image {
@@ -44,11 +47,13 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #333;
+    font-size: 20px;
 }
 
 .nav-links a.active {
     color: #006400;
-    border-bottom: 2px solid #006400;
+    border-bottom: 3px solid #006400;
+    padding-bottom: 5px;
 }
 
 .about {
@@ -60,24 +65,133 @@ body {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 20px;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .stat-box {
-    height: 200px;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    background: #F3F3F3;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 150px;
+}
+
+.stat-box:nth-child(3) {
+    background: #FDF7EC;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.title .material-icons {
+    font-size: 24px;
+    color: #000;
+}
+
+.title h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.attention-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.red-badge {
+    background: #FF3B30;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.badge {
+    background: #E9E9E9;
+    border-radius: 12px;
+    padding: 4px 12px;
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+}
+
+.monthly {
+    font-size: 14px;
+    color: #666;
+}
+
+.arrow-circle {
+    width: 32px;
+    height: 32px;
+    background: #7BC47F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-circle .material-icons {
+    color: white;
+    font-size: 20px;
+}
+
+/* Стили для блока настроек */
+.settings-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.settings-buttons button {
+    background: white;
+    border: 1px solid #E9E9E9;
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000;
+}
+
+.settings-buttons button .material-icons {
+    font-size: 16px;
+    color: #000;
 }
 
 .employee-stats {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    gap: 4rem;
+    gap: 8rem;
 }
 
 .employee-card {
@@ -109,31 +223,6 @@ body {
     padding-top: 1rem;
 }
 
-.stats {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-}
-
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.stat-item p {
-    color: #333;
-    font-size: 1rem;
-    margin: 0;
-}
-
-.stat-value {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
-}
-
 .green-text {
     color: #006400;
 }
@@ -143,9 +232,9 @@ body {
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
-    border: 8px solid #006400;
+    width: 250px;
+    height: 250px;
+    border: 12px solid #006400;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -156,11 +245,26 @@ body {
 .amount {
     color: #006400;
     font-weight: bold;
+    font-size: 24px;
 }
 
 .footer {
-    background-color: #E1C489;
+    background-color: #4A4A4A;
     width: 100%;
-    height: 100px;  /* Можно изменить высоту по необходимости */
-    margin-top: 2rem;  /* Отступ от основного контента */
+    padding: 8px 16px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.support {
+    color: #CCCCCC;
+    text-decoration: underline;
+    cursor: pointer;
 }
